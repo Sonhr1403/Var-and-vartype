@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biến, kiểu dữ liệu và toán tử</title>
+</head>
+<body>
+<script>
+    //bài 1
+    // let physic = parseInt(prompt("Nhập điểm vật lý là:"));
+    // let chemical = parseInt(prompt("Nhập điểm hóa học là:"));
+    // let biological  = parseInt(prompt("Nhập điểm sinh học là:"));
+    // if (physic>=0 && chemical>=0 && biological>=0) {
+    //     let sum = physic + chemical + biological;
+    //     let average = sum/3;
+    //     document.write('Điểm vật lý là:' + physic);
+    //     document.write('<br>');
+    //     document.write('Điểm hóa học là:' + chemical);
+    //     document.write('<br>');
+    //     document.write('Điểm sinh học là:' + biological);
+    //     document.write('<br>');
+    //     document.write('Tổng của 3 môn là:' + sum);
+    //     document.write('<br>');
+    //     document.write('Trung bình của 3 môn là:' + average);
+    //     document.write('<br>');
+    // }
+    // else {
+    //     alert('Không tính được');
+    // }
+
+    //bài 2
+    // let a = parseInt(prompt('Nhập số độ Celsius cần chuyển là:'));
+    // document.write(a + ' độ C');
+    // let b = a/5*9 + 32;
+    // document.write(' = ' + b + ' độ F');
+    // document.write('<br>');
+
+    //bài 3 + 4
+    let r = parseInt(prompt('Nhập bán kính hình tròn là:'))
+    if (r>=0) {
+        document.write('Bán kính hình tròn là: ' + r + '<br>');
+        let s = Math.PI * Math.pow(r, 2);
+        document.write('Diện tích hình tròn là: ' + s + '<br>');
+        let p = r * 2 * Math.PI;
+        document.write('Chu vi hình tròn là: ' + p);
+    }
+    else {
+        alert('Không tính được diện tích và chu vi hình tròn!');
+    }
+</script>
+</body>
+</html>
