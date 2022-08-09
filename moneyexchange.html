@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ứng dụng chuyển đổi tiền tệ</title>
+  <style>
+    table {
+      width: 100%;
+    }
+    input, select {
+      border-radius: 0;
+    }
+    p {
+      color: blue;
+    }
+    button {
+      color: white;
+      background-color: blueviolet;
+      border-radius: 3px;
+      border: 0;
+    }
+    td {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<table>
+    <th><label for="Amountt">Amount</label></th>
+    <th>From Currency</th>
+    <th>To Currency</th>
+    <th></th>
+
+    <tr>
+        <td><input type="text" id="Amountt"></td>
+        <td>
+          <label for="Fromt"></label><select id="Fromt">
+                <option>Vietnam</option>
+                <option>USD</option>
+            </select>
+        </td>
+        <td>
+          <label for="Tot"></label><select id="Tot">
+                <option>USD</option>
+                <option>Vietnam</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="changemoney()">Convert</button>
+        </td>
+    </tr>
+</table>
+<br>
+<p id="Result"></p>
+<script>
+    function changemoney() {
+      let Amount = document.getElementById('Amountt').value;
+      let From = document.getElementById('Fromt').value;
+      let To = document.getElementById('Tot').value;
+      let Erate = 23397;
+      let Result;
+
+      if (From === "Vietnam" && To === "USD") {
+        Result = "Result: " + Amount / Erate + " $";
+      } else if (From === "USD" && To === "Vietnam") {
+        Result = "Result: " + Amount / Erate + " VND";
+      } else if (From === "Vietnam" && To === "Vietnam") {
+        Result = "Result: " + Amount + " VND";
+      } else {
+        Result = "Result: " + Amount + " $";
+      }
+      document.getElementById("Result").innerHTML = Result;
+    }
+</script>
+</body>
+</html>
